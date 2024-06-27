@@ -23,7 +23,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require "globals"
 require "options"
 require "helpers"
@@ -98,8 +97,10 @@ require("lazy").setup({
   { import = "config/nvim-dap" },
   { import = "config/lspconfig" },
   { import = "config/lsp-fidget" },
-  { import = "config/lsp-garbage" },
+--  { import = "config/lsp-garbage" },
 
+  --  { import = "config/nvim-lightbulb" },
+  --  { import = "config/python" },
   -- -----------------------------------------------------------
 }, {
   -- Options

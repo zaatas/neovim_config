@@ -7,7 +7,7 @@ return {
   dependencies = {
     -- completion sources
     { "hrsh7th/cmp-nvim-lsp",     event = "InsertEnter" },
-    { "hrsh7th/cmp-emoji",        event = "InsertEnter" },
+    -- { "hrsh7th/cmp-emoji",        event = "InsertEnter" },
     { "hrsh7th/cmp-buffer",       event = "InsertEnter" },
     { "hrsh7th/cmp-path",         event = "InsertEnter" },
     { "hrsh7th/cmp-cmdline",      event = "InsertEnter" },

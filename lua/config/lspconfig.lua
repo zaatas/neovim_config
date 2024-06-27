@@ -46,6 +46,7 @@ return {
       "marksman",
       "lua_ls",
       "pyright",
+      -- "ruff",
       "ruff_lsp",
     }
 
@@ -55,7 +56,6 @@ return {
       "stylua",
       "prettier",
       "debugpy",
-      "ruff",
     }
 
     require("mason-lspconfig").setup {
@@ -81,8 +81,9 @@ return {
     local function custom_attach(client, bufnr)
       --
       -- change capabilites based on lsp
+      -- if client.name == "ruff_lsp" then
       if client.name == "ruff_lsp" then
-        print "Ruff_Lsp"
+        print "Ruff_Started"
         client.server_capabilities.hoverProvider = false
         -- client.server_capabilities.publishDiagnostics = false
       end
@@ -160,7 +161,7 @@ return {
         bufnr,
         "n",
         "<leader>la",
-        "<cmd>lua vim.lsp.buf.code_action()<cr>",
+        "<cmd>lua vim.lsp.buf.code_action({ action=true })<cr>",
         { desc = "Lsp Code Action" }
       )
 
@@ -251,7 +252,6 @@ return {
     -- ╭─────────────────────────────────────────────────────────╮
     -- │ End custom_attach()                                     │
     -- ╰─────────────────────────────────────────────────────────╯
-
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │ change the flags                                        │

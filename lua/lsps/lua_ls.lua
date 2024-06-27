@@ -1,6 +1,7 @@
 -- https://luals.github.io/wiki/settings/
 -- using .editorconfig in ~/ for lsp options
 return {
+
     settings = {
         Lua = {
             format = {

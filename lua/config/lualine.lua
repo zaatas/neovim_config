@@ -12,7 +12,7 @@ return {
   -- │ Helper function                                         │
   -- ╰─────────────────────────────────────────────────────────╯
   config = function()
-    --
+    -- The venv-selector venv function not working... so I made this for now
     -- Show active env on status line
     local function get_venv()
       if vim.bo.filetype == "python" then
@@ -63,6 +63,7 @@ return {
           "filetype",
         },
         lualine_y = { get_venv, "progress" },
+
         -- lualine_y = { "progress" },
         lualine_z = { "location" },
       },
@@ -73,7 +74,7 @@ return {
           {
             "filename",
             file_status = true, -- displays file status (readonly status, modified status)
-            path = 2, -- 0 = just filename, 1 = relative path, 2 = absolute path
+            path = 2,           -- 0 = just filename, 1 = relative path, 2 = absolute path
           },
         },
         lualine_x = { "location" },
